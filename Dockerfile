@@ -1,5 +1,6 @@
 FROM archlinux:latest
 RUN pacman -Syu --noconfirm
-RUN pacman -S miniserve --noconfirm
-RUN ln -s /var/lib/pacman/sync/*.db /var/cache/pacman/pkg/
-CMD miniserve /var/cache/pacman/pkg
+RUN pacman -S nginx --noconfirm
+RUN mkdir /srv/http/pacman-cache
+RUN chown http:http /srv/http/pacman-cache
+CMD nginx
