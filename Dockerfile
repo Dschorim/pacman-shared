@@ -1,6 +1,5 @@
 FROM archlinux:latest
 RUN pacman -Syu --noconfirm
-RUN pacman -S nginx --noconfirm
-RUN mkdir /srv/http/pacman-cache
-RUN chown http:http /srv/http/pacman-cache
-CMD nginx -t && nginx -g 'daemon off;'
+RUN pacman -S pacoloco --noconfirm
+COPY pacoloco.yaml /etc/pacoloco.yaml
+CMD pacoloco -h && pacoloco

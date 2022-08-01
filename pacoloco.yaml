@@ -1,0 +1,6 @@
+port: 8080
+repos:
+  mycopy:
+    urls:
+      - https://mirror.osbeck.com/archlinux
+      - https://ftp.halifax.rwth-aachen.de/archlinux
