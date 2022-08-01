@@ -3,8 +3,8 @@ purge_files_after: 2592000 # 2592000 seconds or 30 days, 0 to disable
 repos:
   mycopy:
     urls:
-      - https://mirror.osbeck.com/archlinux
-      - https://ftp.halifax.rwth-aachen.de/archlinux
+      - http://arch.jensgutermuth.de/
+      - http://mirror.ams1.nl.leaseweb.net/archlinux/
 prefetch: # optional section, add it if you want to enable prefetching
   cron: 0 0 3 * * * * # standard cron expression (https://en.wikipedia.org/wiki/Cron#CRON_expression) to define how frequently prefetch, see https://github.com/gorhill/cronexpr#implementation for documentation.
   ttl_unaccessed_in_days: 30  # defaults to 30, set it to a higher value than the number of consecutive days you don't update your systems
